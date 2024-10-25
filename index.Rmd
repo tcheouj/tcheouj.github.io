@@ -1,7 +1,5 @@
 ---
-title: "website"
-author: "Johnstone Tcheou"
-date: "2024-10-17"
+title: "Johnstone Tcheou"
 output: 
   html_document
 ---
@@ -10,14 +8,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# ethics
+# Introduction 
 
-[skibidi](https://www.google.com/search?client=firefox-b-1-d&q=skibidi+rizz)
+Hi there - my name is Johnstone Tcheou. I'm a second year MPH student at Columbia University - Mailman School of Public Health, studying epidemiology. My interests include infectious disease epidemiology and biostatistical methods. This summer, I interned with the [NYC DOHMH](https://www.nyc.gov/site/doh/about/about-doh.page) with the Bureau of Epidemiology Services to estimate the NYC population by various geographies of borough, ZIP code tabulation area, and neighborhood tabulation area. I currently work with the [Mathema Lab](https://www.publichealth.columbia.edu/profile/barun-mathema-phd) at Mailman, looking at antimicrobial resistance and transmission in tuberculosis.
 
-![mood](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c5ae195f-e639-4f3e-87e0-6199d10d2fb9/dg65n12-e39839ab-ea1c-4f10-81c0-58a5acdc6a13.png/v1/fit/w_828,h_1056/mike_wazowski_meme_png_by_kylewithem_dg65n12-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYzNCIsInBhdGgiOiJcL2ZcL2M1YWUxOTVmLWU2MzktNGYzZS04N2UwLTYxOTlkMTBkMmZiOVwvZGc2NW4xMi1lMzk4MzlhYi1lYTFjLTRmMTAtODFjMC01OGE1YWNkYzZhMTMucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.cB5_8iLyaxeAgw_R3f64c1uteab3XMgKaOD6nrNNECs)
+Before Columbia, I was most recently a research assistant at the [Krammer Lab](https://labs.icahn.mssm.edu/krammerlab/) at Icahn School of Medicine at Mount Sinai. Prior to that, I was an intern with Broadstreet at the [COVID-19 Data Project](https://covid19dataproject.org/), collecting and QCing weekly COVID-19 case and death counts by county for the Midwest. Even before that, I was a case investigator for COVID-19 with the [NYC Health and Hospitals Test & Trace Corps](https://www.nyc.gov/site/coronavirus/get-tested/test-trace-corps.page). 
 
-![](images/michael.png)
-
-[about](about.html)
-
-[plots](plots.html)
+My GitHub is available [here](http://github.com/tcheouj>/). If you'd like to look at some papers I was previously involved in, my ResearchGate is available [here](https://www.researchgate.net/profile/Johnstone-Tcheou). My LinkedIn is also accessible [here](https://www.linkedin.com/in/jtcheou/). All of these links are also available through the navigation bar.

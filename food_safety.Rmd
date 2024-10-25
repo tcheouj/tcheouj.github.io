@@ -1,0 +1,118 @@
+---
+title: "flexdashboard"
+author: "Johnstone Tcheou"
+date: "2024-10-24"
+output:
+  flexdashboard::flex_dashboard
+---
+
+```{r setup, include=FALSE}
+library(p8105.datasets)
+library(tidyverse)
+library(flexdashboard)
+library(plotly)
+```
+
+```{r import data}
+data("rest_inspec")
+
+summary(rest_inspec)
+
+
+```
+```{r}
+rest_inspec |> 
+  filter(grade == "C" & critical_flag == "Critical") 
+```
+
+```{r score by borough}
+rest_inspec |>
+  filter(!(boro == "Missing")) |> 
+  plot_ly(x = ~boro, y = ~score, color = ~boro, type = "violin", colors = "viridis") 
+```
+
+
+This code chunk takes the total number of critical reports by business and orders them in descending order to see the most frequently reported businesses. Dunkin' Donuts and Dunkin' Donuts/Baskin Robbins are their own separate entry, so these are combined to Dunkin' Donuts. `head` is used to extract the top 20 worst offenders. 
+
+```{r}
+rest_inspec |> 
+  filter(critical_flag == "Critical") |> 
+  mutate(
+    dba = case_match(
+      dba,
+      "DUNKIN' DONUTS, BASKIN ROBBINS" ~ "DUNKIN' DONUTS",
+      .default = dba
+    )
+  ) |>  
+  summary()
+  
+  
+rest_inspec |> 
+  filter(critical_flag == "Critical") |> 
+  mutate(
+    dba = case_match(
+      dba,
+      "DUNKIN' DONUTS, BASKIN ROBBINS" ~ "DUNKIN' DONUTS",
+      .default = dba
+    )
+  ) |> 
+  group_by(dba) |> 
+  summarize(critical_reports = n()) |> 
+  arrange(desc(critical_reports)) |> 
+  head(n = 20) |> 
+  mutate(
+    dba = factor(dba),
+    dba = fct_reorder(dba, critical_reports)
+  ) |> 
+  plot_ly(x = ~dba, y = ~critical_reports, color = ~dba, type = "bar", colors = "viridis") 
+
+rest_inspec |> 
+  filter(critical_flag == "Critical") |> 
+  mutate(
+    dba = case_match(
+      dba,
+      "DUNKIN' DONUTS, BASKIN ROBBINS" ~ "DUNKIN' DONUTS",
+      .default = dba
+    ), 
+    year = year(inspection_date)
+  ) |> 
+  group_by(dba, year) |> 
+  summarize(critical_reports = n()) |> 
+  arrange(desc(critical_reports)) |> 
+  head(n = 100) |> 
+  mutate(
+    dba = factor(dba),
+    dba = fct_reorder(dba, critical_reports),
+    
+  ) |> 
+  plot_ly(x = ~dba, y = ~critical_reports, color = year, type = "bar", colors = "viridis")  
+
+```
+
+This code chunk gets establishments that were closed (or re-closed) among those with critical reports
+
+```{r search for closed}
+rest_inspec |> 
+  filter(critical_flag == "Critical" & str_detect(action, "[Cc]losed"))  |> 
+  summary()
+
+rest_inspec |> 
+  filter(critical_flag == "Critical" & str_detect(action, "[Cc]losed")) |> 
+  group_by(cuisine_description) |> 
+  summarize(closed = n()) |> 
+  arrange(desc(closed)) |> 
+  mutate(
+    cuisine_description = factor(cuisine_description),
+    cuisine_description = fct_reorder(cuisine_description, closed)
+  ) |> 
+  plot_ly(
+    
+  )
+
+rest_inspec |> 
+  filter(critical_flag == "Critical" & str_detect(action, "[Cc]losed"))  |> 
+  plot_ly()
+```
+
+
+### Chart
