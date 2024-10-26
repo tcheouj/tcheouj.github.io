@@ -1,7 +1,5 @@
 ---
 title: "flexdashboard"
-author: "Johnstone Tcheou"
-date: "2024-10-24"
 output:
   flexdashboard::flex_dashboard
 ---
@@ -13,6 +11,8 @@ library(flexdashboard)
 library(plotly)
 ```
 
+The NYC restaurant inspections dataset has `r nrow(rest_inspec)` observations and `r ncol(rest_inspec)` variables. Some observations have no `dba`, which have been filtered out from later analysis. Some observations have a date of 1900-01-01, which is obviously in error. These were also filtered out from subsequent analysis showing critical violations by stores over the years. 
+
 ```{r import data}
 data("rest_inspec")
 
@@ -20,6 +20,7 @@ summary(rest_inspec)
 
 
 ```
+
 ```{r}
 rest_inspec |> 
   filter(grade == "C" & critical_flag == "Critical") 
@@ -28,6 +29,10 @@ rest_inspec |>
 ```{r score by borough}
 rest_inspec |>
   filter(!(boro == "Missing")) |> 
+  mutate(
+    boro = factor(boro),
+    boro = fct_relevel(boro, c("STATEN ISLAND", "BRONX", "QUEENS", "MANHATTAN", "BROOKLYN"))
+  ) |> 
   plot_ly(x = ~boro, y = ~score, color = ~boro, type = "violin", colors = "viridis") 
 ```
 
@@ -78,14 +83,13 @@ rest_inspec |>
   ) |> 
   group_by(dba, year) |> 
   summarize(critical_reports = n()) |> 
-  arrange(desc(critical_reports)) |> 
-  head(n = 100) |> 
+  arrange(desc(critical_reports), year) |> 
+  head(n = 1000) |> 
   mutate(
     dba = factor(dba),
-    dba = fct_reorder(dba, critical_reports),
-    
+    dba = fct_reorder(dba, critical_reports)
   ) |> 
-  plot_ly(x = ~dba, y = ~critical_reports, color = year, type = "bar", colors = "viridis")  
+  plot_ly(x = ~dba, y = ~critical_reports, color = ~dba, type = "bar", colors = "viridis")  
 
 ```
 
@@ -93,18 +97,21 @@ This code chunk gets establishments that were closed (or re-closed) among those 
 
 ```{r search for closed}
 rest_inspec |> 
-  filter(critical_flag == "Critical" & str_detect(action, "[Cc]losed"))  |> 
+  mutate(
+    action = iconv(action, to = "UTF-8")
+  ) |> 
+  filter(critical_flag == "Critical" & str_detect(action, "[Cc]losed", ))  
   summary()
 
 rest_inspec |> 
-  filter(critical_flag == "Critical" & str_detect(action, "[Cc]losed")) |> 
+  filter(critical_flag == "Critical" & str_detect(action, "[Cc]losed")) 
   group_by(cuisine_description) |> 
   summarize(closed = n()) |> 
   arrange(desc(closed)) |> 
   mutate(
     cuisine_description = factor(cuisine_description),
     cuisine_description = fct_reorder(cuisine_description, closed)
-  ) |> 
+  )  
   plot_ly(
     
   )

@@ -6,13 +6,13 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Resume"
-      href: plots.html
-    - text: "Flexdashboard"
-      href: flexdashboard.html
+      href: resume.html
+    - text: "NYC food safety plots"
+      href: food_safety.html
     - icon: fa-envelope fa-lg
       href: mailto:<tcheoujohnstone@gmail.com>
     - icon: fa-github fa-lg
-      href: http://github.com/tcheouj>/
+      href: http://github.com/tcheouj/
     - icon: fa-brands fa-linkedin
       href: https://www.linkedin.com/in/jtcheou/
     - icon: fa-brands fa-researchgate

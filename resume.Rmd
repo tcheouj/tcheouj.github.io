@@ -1,0 +1,111 @@
+---
+title: "Resume"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Johnstone Tcheou**
+## Education
+
+### Bachelor of Science | 05/2020 | Brandeis University 
+
+* Majors: Biology and Health: Science, Society, and Policy (HSSP)
+
+### Master of Public Health in Epidemiology | Expected 05/2025 | Columbia University
+
+* Certificate in Applied Biostatistics & Public Health Data Science 
+
+## Skills & Abilities
+
+### Spoken languages
+Chinese (conversational), Spanish (conversational), Korean (conversational)
+### Software
+R, SAS, SUDAAN, Bash, Python, Java, GraphPad Prism, ArcGIS, Qualtrics, Microsoft Office
+
+## Employment
+
+### Research Associate | Mathema Lab at Mailman School of Public Health | 04/2024 – 
+
+* Conducting bioinformatics analysis of genomic tuberculosis data in Bash and Python for phylogenetic trees of clusters and drug resistance.
+
+### HRTP Intern | New York City Department of Health and Mental Hygiene | 06/2024 – 09/2024
+
+* Used SAS to calculate NYC population estimates by demographics and geographies using ratio adjustment and raking for 13 datasets and R to graph distributions of race, age, race and sex, race and poverty levels, and largest estimated ZIP code tabulation area (ZCTA) populations per race.
+* Used SUDAAN to estimate demographic and condition prevalence from citywide health survey data. 
+* Gave presentations among unit, bureau, and a separate team working with population estimates to acquaint them with process and final estimates datasets.
+* Created thorough 50-page documentation for future analysts to continue similar practices and adjust as needed when city geographies change borders and jurisdictions.
+
+### Quality Assurance Intern | Broadstreet COVID-19 Data Project | 12/2020 – 06/2021
+
+* Ensured counts for cumulative COVID cases and deaths by county in our database are accurate and
+follow expected trends, while investigating and correcting inconsistencies and trend breaks.
+* Cleaned and analyzed database data to calculate 3 to 7 day rolling averages in cases and deaths.
+* Created online dashboard using R showing county rolling averages for COVID cases and deaths.
+* Organized team bonding events and meetings to help team members get to know each other.
+
+### Case Investigator | NYC Health + Hospitals | 05/2020 – 12/2020
+* Called hundreds of COVID-positive and presumed positive NYC residents in a culturally and trauma
+respectful manner to provide them with public health guidelines and resources.
+* Elicited contacts from cases to prevent further transmission of the virus, collecting contact
+information while maintaining confidentiality and privacy, and ensuring cases can isolate safely.
+
+## **Publications** 
+
+* **Tcheou, Johnstone**\*, Ariel Raskin\*, Gagandeep Singh, Hisaaki Kawabata, Dominika Bielak, Weina Sun, Irene González-Domínguez, et al. “Safety and Immunogenicity Analysis of a Newcastle Disease
+Virus (NDV-HXP-S) Expressing the Spike Protein of SARS-CoV-2 in Sprague Dawley Rats.” Frontiers
+in Immunology 12 (2021). https://doi.org/10.3389/fimmu.2021.791764. 
+	· * indicates these authors contributed equally. 
+· Carreño, Juan Manuel, Hala Alshammary, Gagandeep Singh, Ariel Raskin, Fatima Amanat, Angela
+Amoako, Ana Silvia Gonzalez-Reiche, et al. “Evidence for Retained Spike-Binding and Neutralizing
+Activity against Emerging SARS-CoV-2 Variants in Serum of COVID-19 MRNA Vaccine Recipients.”
+EBioMedicine 73 (2021): 103626. https://doi.org/10.1016/j.ebiom.2021.103626.
+· Carreño, Juan Manuel, Hala Alshammary, **Johnstone Tcheou**, Gagandeep Singh, Ariel J. Raskin,
+Hisaaki Kawabata, Levy A. Sominsky, et al. “Activity of Convalescent and Vaccine Serum against
+SARS-CoV-2 Omicron.” Nature 602, no. 7898 (2022): 682–88.
+https://doi.org/10.1038/s41586-022-04399-5.
+· Carreño, Juan Manuel, Gagandeep Singh, **Johnstone Tcheou**, Komal Srivastava, Charles Gleason,
+Hiromi Muramatsu, Parnavi Desai, et al. “MRNA-1273 but Not BNT162b2 Induces Antibodies against
+Polyethylene Glycol (PEG) Contained in MRNA-Based Vaccine Formulations.” Vaccine 40, no. 42
+(2022): 6114–24. https://doi.org/10.1016/j.vaccine.2022.08.024.
+· Dang, Anh Duc, Thiem Dinh Vu, Ha Hai Vu, Van Thanh Ta, Anh Thi Van Pham, Mai Thi Ngoc Dang, Be
+Van Le, et al. “Safety and Immunogenicity of an Egg-Based Inactivated Newcastle Disease Virus
+Vaccine Expressing SARS-CoV-2 Spike: Interim Results of a Randomized, Placebo-Controlled, Phase
+1/2 Trial in Vietnam.” Vaccine 40, no. 26 (2022): 3621–32.
+https://doi.org/10.1016/j.vaccine.2022.04.078.
+· Kubale, John, Charles Gleason, Juan Manuel Carreño, Komal Srivastava, Gagandeep Singh, PARIS
+Study Team, Aubree Gordon, Florian Krammer, and Viviana Simon. “SARS-CoV-2 Spike-Binding
+Antibody Longevity and Protection from Reinfection with Antigenically Similar SARS-CoV-2
+Variants.” MBio 13, no. 5 (2022): e01784-22. https://doi.org/10.1128/mbio.01784-22.
+· Ozonoff, Al, Joanna Schaenman, Naresh Doni Jayavelu, Carly E. Milliren, Carolyn S. Calfee, Charles B. Cairns, Monica Kraft, et al. “Phenotypes of disease severity in a cohort of hospitalized COVID-19 patients: Results from the IMPACC study.” eBioMedicine 83 (2022). https://doi.org/10.1016/j.ebiom.2022.104208.
+· Mack, P. C., J. C. Gomez, A. Rodilla, J. M. Carreño, C.-Y. Hsu, C. D. Rolfo, N. Meshulami, et al.
+“OA06.03 Serological Response to SARS-CoV-2 Vaccination in Patients Lung Cancer: A Mount
+Sinai-Led Prospective Matched Controlled Study.” Journal of Thoracic Oncology 17, no. 9
+(2022): S17–18. https://doi.org/10.1016/j.jtho.2022.07.035.
+· Mack, Philip C., Jorge E. Gomez, Ananda M. Rodilla, Juan Manuel Carreño, Chih-Yuan Hsu, Christian
+Rolfo, Noy Meshulami, et al. “Longitudinal COVID-19-Vaccination-Induced Antibody Responses and
+Omicron Neutralization in Patients with Lung Cancer.” Cancer Cell 40, no. 6 (2022):
+575–77. https://doi.org/10.1016/j.ccell.2022.04.012.
+· Pitisuttithum, Punnee, Viravarn Luvira, Saranath Lawpoolsri, Sant Muangnoicharoen, Supitcha
+Kamolratanakul, Chaisith Sivakorn, Piengthong Narakorn, et al. “Safety and Immunogenicity of an
+Inactivated Recombinant Newcastle Disease Virus Vaccine Expressing SARS-CoV-2 Spike: Interim
+Results of a Randomised, Placebo-Controlled, Phase 1 Trial.” EClinicalMedicine 45 (2022).
+https://doi.org/10.1016/j.eclinm.2022.101323.
+· Sano, Kaori, Disha Bhavsar, Gagandeep Singh, Daniel Floda, Komal Srivastava, Charles Gleason,
+Juan Manuel Carreño, Viviana Simon, and Florian Krammer. “SARS-CoV-2 Vaccination Induces
+Mucosal Antibody Responses in Previously Infected Individuals.” Nature Communications 13, no. 1
+(2022): 5135. https://doi.org/10.1038/s41467-022-32389-8.
+· Simon, Viviana, Vamsi Kota, Ryan F. Bloomquist, Hannah B. Hanley, David Forgacs, Savita Pahwa,
+Suresh Pallikkuth, et al. “PARIS and SPARTA: Finding the Achilles’ Heel of SARS-CoV-2.” MSphere 7,
+no. 3 (2022): e00179-22. https://doi.org/10.1128/msphere.00179-22.
+· Singh, Gagandeep, Anass Abbad, **Johnstone Tcheou**, Demodara Rao Mendu, Adolfo Firpo-Betancourt, Charles Gleason, Komal Srivastava, et al. “Binding and Avidity Signatures of Polyclonal Sera from Individuals with Different Exposure Histories to SARS-CoV-2 Infection, Vaccination, and Omicron Breakthrough Infections.” Journal of Infectious Diseases 228, no. 5 (2023): 564-575. https://doi.org/10.1093/infdis/jiad116.
+· Sand, Ilana Katz, Sacha Gnjatic, Florian Krammer, Kevin Tuballes, Juan Manuel Carreño, Sammita
+Satyanarayan, Susan Filomena, et al. “Evaluation of Immunological Responses to Third COVID-19
+Vaccine among People Treated with Sphingosine Receptor-1 Modulators and Anti-CD20 Therapy.”
+Multiple Sclerosis and Related Disorders 70 (2023). https://doi.org/10.1101/2022.06.10.22276253.
+· Carreño, Juan Manuel, Ariel Raskin, Gagandeep Singh, **Johnstone Tcheou**, Hisaaki Kawabata, Charles Gleason, Komal Srivastava, et al. “An inactivated NDV-HXP-S COVID-19 vaccine elicits a higher proportion of neutralizing antibodies in humans than mRNA vaccination.” Science Translational Medicine 15, no. 683 (2023). https://doi.org/10.1126/scitranslmed.abo2847.
+· Diray-Arce, Joann, Slim Fourati, Naresh Doni Jayavelu, Ravi Patel, Cole Maguire, Ana C. Chang, Ravi Dandekar, et al. “Multi-omic longitudinal study reveals immune correlates of clinical course among hospitalized COVID-19 patients.” Cell Press 4, no. 6 (2023). https://doi.org/10.1016/j.xcrm.2023.101079.
+· Carreño, Juan Manuel, Abram L. Wagner, Brian Monahan, Daniel Floda, Ana S. Gonzalez-Reiche, **Johnstone Tcheou**, Ariel Raskin, et al. “SARS-CoV-2 serosurvey across multiple waves of the COVID-19 pandemic in New York City between 2020-2023”. In review at Nature Immunology (2023). https://doi.org/10.1101/2023.12.18.23300131.
+· Abbad, Anass, Temima Yellin, Gagandeep Singh, Miriam Fried, Ariel Raskin, **Johnstone Tcheou**, Brian Monahan, et al. “SARS-CoV-2 BA.1 and BA.2 breakthrough infections boost antibody responses to early Omicron subvariants but not BQ.1.1 and XBB.1.5”. In review at Cell Reports Medicine (2023). 
