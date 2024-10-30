@@ -6,7 +6,7 @@ output: html_document
 
 ## About this page
 
-This website has a Flexdashboard containing a few plots on NYC restaurant inspection data. 
+This website has my resume either as a downloadable PDf or rendered as a web page for readability/scrollability. As a native New Yorker and a self-proclaimed foodie, the website also has a Flexdashboard containing some plots on NYC restaurant inspection data. Below is further information detailing the data cleaning and visualization process for the Flexdashboard plots.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -15,9 +15,13 @@ library(tidyverse)
 data("rest_inspec")
 ```
 
+### Data import
+
 The NYC restaurant inspections dataset has `r nrow(rest_inspec)` observations and `r ncol(rest_inspec)` variables. There are many variables and observations in the dataset. The most crucial of which are the health safety-related variables, including the DOHMH health safety assessments with `action` - the action being taken based on their  inspection findings, the `score`, which is worse the higher it gets, as that indicates more violations and/or more serious violations were found. For example, a public health hazard like not keeping food at a safe temperature is worth 7 points. A single contaminated food item is worth 7 point, where 4 or more contaminated food items is more severe and worth 10 points. `grade`s are the letter grades seen outside establishments with letter grades based on the restaurant's `score`s, where A is between 0-13, B is 14-27, and C is 28 and above. There is also geographic data like `zipcode`, `boro`, `street`, and `address`, and restaurant info like `dba` - the business name, and `phone` of the establishment. 
 
 The analysis uses this data to assess some trends in scores by borough, along with seeing which restaurants and cuisines have accrued the highest amounts of points from health violations - one of which is somewhat close to campus. Additionally, potentially doxxing myself, there is a graph of establishments of ZIP codes near my home, showing the distribution of their scores by cuisine. 
+
+### Data analysis
 
 To get the data ready for analysis, some cleaning was needed for each analysis. Some observations have no `dba`, which have been filtered out from later analysis. Some observations have a date of `1900-01-01`, which is obviously in error and likely actually 2000-01-01. These were also filtered out from subsequent analysis showing critical violations by stores over the years. In the violin plot for scores by borough, the observations without `boro` or `score` are filtered out. For the graph with the restaurants with the most critical reports, the code chunk takes the total number of critical reports by business and orders them in descending order to see the most frequently reported businesses. Dunkin' Donuts and Dunkin' Donuts/Baskin Robbins are their own separate entry, so these are combined to Dunkin' Donuts. `head` is used to extract some of the worst offenders. The graph of establishments that were closed (or re-closed) among those with critical reports, stratified by cuisine type circumvents an encoding issue in an unrelated variable that prevented filtering from running without errors by keeping the necessary variables only before filtering and `mutate`s the `cuisine_description` to change its encoding type. The following graph filters for the restaurants in my nearby ZIP codes and stratifies them by cuisine, showing their distribution of scores. Observations without `inspection_date`, without `score`, or have `cuisine_description` as `"Not Listed/Not Applicable"` are omitted. The last graph tracks the trends of average score by borough by month. The dataset filters out observations where `inspection_date` is 1900 and observations without `inspection_date`. 
 

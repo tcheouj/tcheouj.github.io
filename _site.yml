@@ -17,6 +17,8 @@ navbar:
       href: https://www.linkedin.com/in/jtcheou/
     - icon: fa-brands fa-researchgate
       href: https://www.researchgate.net/profile/Johnstone-Tcheou
+    - text: "Resume as a document"
+      href: "./Johnstone Tcheou Resume.pdf"
 output:
   html_document:
     theme: cosmo

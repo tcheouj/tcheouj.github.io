@@ -1,5 +1,5 @@
 ---
-title: "flexdashboard"
+title: "Food safety in NYC"
 output:
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -9,6 +9,7 @@ output:
       - { title: "Home", href: index.html, align: left }
       - { title: "About", href: about.html, align: left } 
       - { title: "Resume", href: resume.html, align: left }
+      - { title: "Resume as doc", href: "./Johnstone Tcheou Resume.pdf", align: left }
 ---
 
 ```{r setup, include=FALSE}
@@ -18,7 +19,7 @@ library(flexdashboard)
 library(plotly)
 ```
 
-```{r}
+```{r import data}
 data("rest_inspec")
 ```
 
@@ -28,7 +29,7 @@ Column {data-width=450}
 
 ### Distribution of scores by borough 
 
-```{r}
+```{r distribution of scores by borough}
 rest_inspec |>
   filter(!(boro == "Missing") & !is.na(score)) |> 
   mutate(
@@ -58,7 +59,7 @@ rest_inspec |>
 
 ### Scores by cuisine of ZIP codes near me
 
-```{r}
+```{r scores by cuisine of nearby ZIPs}
 rest_inspec |> 
   select(cuisine_description, score, zipcode, dba) |> 
   filter(!is.na(cuisine_description) & !is.na(score) & cuisine_description != "Not Listed/Not Applicable" & zipcode %in% c(10010, 10016, 10001)) |> 
@@ -94,7 +95,7 @@ Column {data-width=450}
 
 ### Average score over time by borough, 10/2011 - 10/2017
 
-```{r}
+```{r october 2011 to 2017 avg score by borough}
 mn_avg_score <- 
   rest_inspec |> 
   select(inspection_date, score, boro) |> 
@@ -143,7 +144,7 @@ plot_ly(si_avg_score, x = ~inspection_date, y = ~avg_score, name = "Staten Islan
 
 ### Restaurants with most critical reports
 
-```{r}
+```{r restaurants with most critical reports}
 critical_restaurants_levels <- 
   rest_inspec |> 
   filter(critical_flag == "Critical" & year(inspection_date) != 1900) |> 
@@ -188,7 +189,7 @@ rest_inspec |>
 
 ### Cuisines with the most DOHMH-forced closures
 
-```{r}
+```{r cuisines with most DOHMH closures}
 cuisine_levels <-
   rest_inspec |> 
   mutate(
